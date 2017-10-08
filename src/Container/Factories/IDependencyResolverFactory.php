@@ -1,6 +1,6 @@
 <?php
 
-namespace Unity\Component\Container\Contracts;
+namespace Unity\Contracts\Container\Factories;
 
 /**
  * Interface IDependencyResolverFactory.
