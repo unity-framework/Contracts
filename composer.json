@@ -1,0 +1,21 @@
+{
+    "name": "unity/contracts",
+    "version": "0.0",
+    "description": "Unity framework component contracts.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eleandro Duzentos",
+            "email": "eleandro@inbox.ru"
+        }
+    ],
+    "require": {
+        "psr/container": "^1.0"
+    },
+    "autoload": {
+	    "psr-4": {
+            "Unity\\Contracts\\": "src/"
+	    }
+    }
+}
