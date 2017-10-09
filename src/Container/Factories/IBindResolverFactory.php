@@ -3,6 +3,7 @@
 namespace Unity\Contracts\Container\Factories;
 
 use Closure;
+use Unity\Contracts\Container\IContainer;
 
 /**
  * Interface IBindResolverFactory.
