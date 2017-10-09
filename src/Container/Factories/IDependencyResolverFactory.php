@@ -2,6 +2,9 @@
 
 namespace Unity\Contracts\Container\Factories;
 
+use Unity\Contracts\Container\IContainer;
+use Unity\Contracts\Container\Dependency\IDependencyFactory;
+
 /**
  * Interface IDependencyResolverFactory.
  *
