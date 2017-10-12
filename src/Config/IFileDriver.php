@@ -10,11 +10,11 @@ namespace Unity\Contracts\Config;
 interface IFileDriver extends IDriver
 {
     /**
-     * Parses $file content and returns its data
+     * Parses $file content and returns its data.
      *
      * @param $file
      *
      * @return array
      */
-    function parse($file) : array;
+    public function parse($file) : array;
 }

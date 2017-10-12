@@ -10,11 +10,11 @@ namespace Unity\Contracts\Config;
 interface IDriver
 {
     /**
-     * Loads all configurations from the source
+     * Loads all configurations from the source.
      *
      * @param $source mixed Configurations source
      *
      * @return array
      */
-    function load($source) : array;
+    public function load($source) : array;
 }

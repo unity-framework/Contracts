@@ -12,8 +12,8 @@ interface IServiceProvider
     /**
      * Register services.
      *
-     * @param  IContainer $container
-     * 
+     * @param IContainer $container
+     *
      * @return array
      */
     public function register(IContainer $container);

@@ -16,14 +16,14 @@ interface IDrivers
      *
      * @return bool
      */
-    function has($driver);
+    public function has($driver);
 
     /**
      * Returns all available drivers aliases and their supported extensions.
      *
      * @return array
      */
-    function getAll();
+    public function getAll();
 
     /**
      * Checks if at least one driver supports the given `$source`.
@@ -32,5 +32,5 @@ interface IDrivers
      *
      * @return bool
      */
-    function offersSupportFor($source);
+    public function offersSupportFor($source);
 }
