@@ -5,7 +5,7 @@ namespace Unity\Contracts\Notator;
 interface INotation
 {
     /**
-     * Denotes a string
+     * Denotes a string.
      *
      * @param $notation
      *
