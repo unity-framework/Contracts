@@ -68,8 +68,10 @@ interface IContainer extends ContainerInterface, ArrayAccess, Countable
     /**
      * Resolves and returns the registered dependency on every call.
      *
-     * @param string     $id     Dependency resolver identifier.
-     * @param array|null $params
+     * @param string $id     Dependency resolver identifier.
+     * @param array  $params
+     *
+     * @throws NotFoundException
      *
      * @return mixed
      */
@@ -79,14 +81,14 @@ interface IContainer extends ContainerInterface, ArrayAccess, Countable
      * @param string $class
      * @param mixed  $entry
      *
-     * Binds a concrete class to an interface.
+     * Binds a callback return value to a class.
      *
      * Every time a class needs an argument of type `$class`,
-     * the `$entry` will be resolved, and the value will be injected.
+     * the `$callback` will be invoked, and the return value will be injected.
      *
      * Different of the register method, this will not throw an exception
-     * if you register an bind with the same key twice, instead, it will
-     * replace the old bind by this new one.
+     * if you register a bind with the same key twice, instead, it will
+     * replace the old bind with this new one.
      *
      * @return IContainer
      */
