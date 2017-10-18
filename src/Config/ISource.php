@@ -15,22 +15,7 @@ interface ISource
     function getData();
 
     /**
-     * @return string
-     */
-    function getKey();
-
-    /**
-     * @return bool
-     */
-    function hasKey();
-
-    /**
      * @return mixed
      */
     function getSource();
-
-    /**
-     * @return string
-     */
-    function getDriver();
 }
