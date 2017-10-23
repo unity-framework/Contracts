@@ -2,14 +2,12 @@
 
 namespace Unity\Contracts\Container\Dependency;
 
-use Unity\Contracts\Container\IResolver;
-
 /**
  * Interface IDependencyResolver.
  *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
  */
-interface IDependencyResolver extends IResolver
+interface IDependencyResolver
 {
     /**
      * Resolves and returns a new dependency on every call.
@@ -24,10 +22,17 @@ interface IDependencyResolver extends IResolver
      * @return mixed
      */
     public function make($arguments = null);
+    
+    /**
+     * Resolves the dependency.
+     *
+     * @return mixed
+     */
+    public function resolve();
 
     /**
      * Prevents the entry from being resolved
-     * causing its imediactly return.
+     * causing its immediately return.
      *
      * @param bool $enabled
      *
@@ -50,4 +55,21 @@ interface IDependencyResolver extends IResolver
      * @return array
      */
     public function getArguments();
+
+    /**
+     * @param string $class
+     * @param mixed  $callback
+     *
+     * Binds a callback return value to a class.
+     *
+     * Every time a class needs an argument of type `$class`,
+     * the `$callback` will be invoked, and the return value will be injected.
+     *
+     * Different of the register method, this will not throw an exception
+     * if you register a bind with the same key twice, instead, it will
+     * replace the old bind with this new one.
+     *
+     * @return static
+     */
+    public function bind($class, $callback);
 }
