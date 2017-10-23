@@ -12,5 +12,10 @@ use Unity\Contracts\Container\Dependency\IDependencyFactory;
  */
 interface IDependencyResolverFactory
 {
-    public function make($entry, IDependencyFactory $dependencyFactory, IContainer $container);
+    public function make(
+        $entry,
+        IDependencyFactory $dependencyFactory,
+        IBindResolverFactory $bindResolverFactory,
+        IContainer $container
+    );
 }
