@@ -88,41 +88,4 @@ interface IContainer extends ContainerInterface, ArrayAccess, Countable
      * @param IServiceProvider $serviceProvider A service provider.
      */
     public function setServiceProvider(IServiceProvider $serviceProvider);
-
-    /**
-     * Enable|Disable autowiring.
-     *
-     * Tells the container if it should auto wiring.
-     *
-     * @param bool $enable
-     *
-     * @return $this
-     */
-    public function enableAutowiring($enable);
-
-    /**
-     * Checks if injection is enabled.
-     *
-     * @return bool
-     */
-    public function canAutowiring();
-
-    /**
-     * Enable|Disable the use of annotations.
-     *
-     * Tells the container if it can inspect annotations
-     * searching for properties or constructor dependencies.
-     *
-     * @param bool $enable
-     *
-     * @return $this
-     */
-    public function enableUseAnnotation($enable);
-
-    /**
-     * Checks if the use of annotations is enabled.
-     *
-     * @return bool
-     */
-    public function canUseAnnotations();
 }
