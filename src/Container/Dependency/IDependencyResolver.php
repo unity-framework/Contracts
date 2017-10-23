@@ -2,12 +2,14 @@
 
 namespace Unity\Contracts\Container\Dependency;
 
+use Unity\Contracts\Container\IResolver;
+
 /**
  * Interface IDependencyResolver.
  *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
  */
-interface IDependencyResolver
+interface IDependencyResolver extends IResolver
 {
     /**
      * Resolves and returns a new dependency on every call.
@@ -22,13 +24,6 @@ interface IDependencyResolver
      * @return mixed
      */
     public function make($arguments = null);
-    
-    /**
-     * Resolves the dependency.
-     *
-     * @return mixed
-     */
-    public function resolve();
 
     /**
      * Prevents the entry from being resolved

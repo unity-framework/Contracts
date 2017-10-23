@@ -2,17 +2,13 @@
 
 namespace Unity\Contracts\Container\Bind;
 
+use Unity\Contracts\Container\IResolver;
+
 /**
  * Interface IBindResolver.
  *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
  */
-interface IBindResolver
+interface IBindResolver extends IResolver
 {
-    /**
-     * Resolves a value bounded to a class.
-     * 
-     * @return mixed
-     */
-    public function resolve();
 }
