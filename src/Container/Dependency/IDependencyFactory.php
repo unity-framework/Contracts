@@ -12,13 +12,6 @@ use Unity\Contracts\Container\IContainer;
 interface IDependencyFactory
 {
     /**
-     * Sets the IContainer instance.
-     *
-     * @param IContainer $container
-     */
-    public function setContainer(IContainer $container);
-
-    /**
      * Makes a `$class` instance.
      *
      * @param string $class        Class name.
