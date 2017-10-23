@@ -5,7 +5,7 @@ namespace Unity\Contracts\Container;
 use ArrayAccess;
 use Countable;
 use Psr\Container\ContainerInterface;
-use Unity\Contracts\Container\Dependency\IDependencyIResolver;
+use Unity\Contracts\Container\Dependency\IDependencyResolver;
 
 /**
  * Interface IContainer.
@@ -20,7 +20,7 @@ interface IContainer extends ContainerInterface, ArrayAccess, Countable
      * @param string $id
      * @param mixed  $entry Content that will be used to generate the dependency.
      *
-     * @return IDependencyIResolver
+     * @return IDependencyResolver
      */
     public function set($id, $entry);
 
@@ -42,7 +42,7 @@ interface IContainer extends ContainerInterface, ArrayAccess, Countable
      * @param mixed  $entry
      *                      Content that will be used to resolve the dependency.
      *
-     * @return IDependencyIResolver
+     * @return IDependencyResolver
      */
     public function replace($id, $entry);
 
@@ -71,42 +71,9 @@ interface IContainer extends ContainerInterface, ArrayAccess, Countable
      * @param string $id     Dependency resolver identifier.
      * @param array  $params
      *
-     * @throws NotFoundException
-     *
      * @return mixed
      */
     public function make($id, $params = null);
-
-    /**
-     * @param string $class
-     * @param mixed  $entry
-     *
-     * Binds a callback return value to a class.
-     *
-     * Every time a class needs an argument of type `$class`,
-     * the `$callback` will be invoked, and the return value will be injected.
-     *
-     * Different of the register method, this will not throw an exception
-     * if you register a bind with the same key twice, instead, it will
-     * replace the old bind with this new one.
-     *
-     * @return IContainer
-     */
-    public function bind(string $class, $entry);
-
-    /**
-     * @param string $class
-     *
-     * @return mixed
-     */
-    public function getBoundValue(string $class);
-
-    /**
-     * @param string $class
-     *
-     * @return bool
-     */
-    public function isBound(string $class);
 
     /**
      * Sets a collection of service providers.
