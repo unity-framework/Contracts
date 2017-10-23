@@ -9,5 +9,5 @@ namespace Unity\Contracts\Container;
  */
 interface IResolver
 {
-    
+    public function resolve();
 }
