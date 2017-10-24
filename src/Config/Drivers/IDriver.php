@@ -1,6 +1,6 @@
 <?php
 
-namespace Unity\Contracts\Config;
+namespace Unity\Contracts\Config\Drivers;
 
 /**
  * Interface IDriver.
