@@ -2,6 +2,8 @@
 
 namespace Unity\Contracts\Container;
 
+use Unity\Contracts\Container\IContainer;
+
 /**
  * Interface IServiceProvider.
  *
