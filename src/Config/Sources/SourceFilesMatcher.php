@@ -3,13 +3,13 @@
 namespace Unity\Contracts\Config\Sources;
 
 /**
- * Class IFileSourcesRepository.
+ * Class ISourceFilesMatcher.
  *
  * Matches files in a source folder.
  *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
  */
-interface IFilesSourceMatcher
+interface ISourceFilesMatcher
 {
     /**
      * Matchs source files in `$folder`.
