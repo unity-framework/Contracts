@@ -10,7 +10,7 @@ namespace Unity\Contracts\Config;
 interface IConfig
 {
     /**
-     * Returns the configuration value
+     * Gets a configuration value.
      *
      * @param $config
      *
@@ -19,11 +19,18 @@ interface IConfig
     function get($config);
 
     /**
-     * Checks if a configuration exists
+     * Checks ifs a configuration exists.
      *
      * @param $config
      *
      * @return bool
      */
     function has($config);
+
+    /**
+     * Gets all available configurations.
+     *
+     * @return array
+     */
+    function getAll();
 }
