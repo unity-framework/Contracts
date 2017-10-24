@@ -2,8 +2,6 @@
 
 namespace Unity\Contracts\Container;
 
-use Unity\Contracts\Container\IContainer;
-
 /**
  * Interface IServiceProvider.
  *
@@ -14,7 +12,7 @@ interface IServiceProvider
     /**
      * Register services.
      *
-     * @param  IContainer $container
+     * @param IContainer $container
      */
     public function register(IContainer $container);
 }

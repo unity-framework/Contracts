@@ -11,7 +11,7 @@ interface IDriverFactory
      *
      * @return string
      */
-    function get($alias);
+    public function get($alias);
 
     /**
      * Checks if a driver within the given `$alias` exists.
@@ -20,14 +20,14 @@ interface IDriverFactory
      *
      * @return bool
      */
-    function has($alias);
+    public function has($alias);
 
     /**
      * Returns all available drivers.
      *
      * @return array
      */
-    function getAll();
+    public function getAll();
 
     /**
      * Makes an IDriver instance based on the given `$extension`.
@@ -36,17 +36,17 @@ interface IDriverFactory
      *
      * @return IDriver|false
      */
-    function makeFromExt($extension);
+    public function makeFromExt($extension);
 
     /**
-     * Makes an IDriver instance based on the given `$file` extension
+     * Makes an IDriver instance based on the given `$file` extension.
      *
      * @param $file string
      *
      * @return IDriver|false
      */
-    function makeFromFile($file);
-    
+    public function makeFromFile($file);
+
     /**
      * Makes an IDriver instance based on the given `$alias`.
      *
@@ -54,5 +54,5 @@ interface IDriverFactory
      *
      * @return IDriver|false
      */
-    function makeFromAlias($alias);
+    public function makeFromAlias($alias);
 }
