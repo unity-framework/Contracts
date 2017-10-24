@@ -1,6 +1,6 @@
 <?php
 
-namespace Unity\Contracts\Config;
+namespace Unity\Contracts\Config\Factories;
 
 /**
  * Interface ISourceFactory.
@@ -20,5 +20,14 @@ interface ISourceFactory
      */
     function makeFromFile($file, $driver = null, $ext = null);
 
+    /**
+     * Makes and returns an ISource instance that represents a folder.
+     *
+     * @param string $folder
+     * @param string $driver The driver that will be used.
+     * @param string $ext
+     * 
+     * @return ISource
+     */
     function makeFromFolder($file, $driver = null, $ext = null);
 }
