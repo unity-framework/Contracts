@@ -15,9 +15,10 @@ interface IDependencyFactory
      * Makes a `$class` instance.
      *
      * @param string $class        Class name.
-     * @param array  $dependencies Constructor dependencies.
+     * @param array  $arguments Constructor arguments.
+     * @param array  $binds Constructor parameter binds.
      *
      * @return mixed|object
      */
-    public function make($class, $dependencies = []);
+    public function make($class, $arguments = [], $binds = []);
 }
