@@ -10,21 +10,30 @@ namespace Unity\Contracts\Config;
 interface IConfig
 {
     /**
+<<<<<<< HEAD
      * Gets a configuration value.
+=======
+     * Returns the configuration value.
+>>>>>>> 850bcd9341b47b71661fcb886b925f23e00f6a32
      *
      * @param $config
      *
      * @return mixed
      */
-    function get($config);
+    public function get($config);
 
     /**
+<<<<<<< HEAD
      * Checks ifs a configuration exists.
+=======
+     * Checks if a configuration exists.
+>>>>>>> 850bcd9341b47b71661fcb886b925f23e00f6a32
      *
      * @param $config
      *
      * @return bool
      */
+<<<<<<< HEAD
     function has($config);
 
     /**
@@ -33,4 +42,7 @@ interface IConfig
      * @return array
      */
     function getAll();
+=======
+    public function has($config);
+>>>>>>> 850bcd9341b47b71661fcb886b925f23e00f6a32
 }
