@@ -3,11 +3,11 @@
 namespace Unity\Contracts\Config\Sources;
 
 /**
- * Interface IFileSource
+ * Interface ISourceFile
  *
  * @author Eleandro Duzentos <eleandro@inbox.ru>
  */
-interface IFileSource extends ISource
+interface ISourceFile extends ISource
 {    
     /**
      * @return string
