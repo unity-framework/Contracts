@@ -2,6 +2,8 @@
 
 namespace Unity\Contracts\Config;
 
+use Unity\Contracts\Container\IContainer;
+
 /**
  * Interface IConfigManager.
  *
