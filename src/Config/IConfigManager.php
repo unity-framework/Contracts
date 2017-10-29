@@ -1,5 +1,12 @@
 <?php
 
+namespace Unity\Contracts\Config;
+
+/**
+ * Interface IConfigManager.
+ *
+ * @author Eleandro Duzentos <eleandro@inbox.ru>
+ */
 interface IConfigManager
 {
     /**
