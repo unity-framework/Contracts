@@ -52,6 +52,18 @@ interface IConfigManager
      * @return static
      */
     public function setContainer(IContainer $container);
+    
+    /**
+     * Sets the cache path.
+     *
+     * It's also actives the caching.
+     *
+     * @param string $cachePath
+     * @param string $cacheExpTime
+     *
+     * @return static
+     */
+    public function setupCache($cachePath, $cacheExpTime);
 
     /**
      * Checks if a source was provided.
@@ -66,17 +78,6 @@ interface IConfigManager
      * @return bool
      */
     public function hasContainer();
-
-    /**
-     * Sets the cache path.
-     *
-     * It's also actives the caching.
-     *
-     * @param $path
-     *
-     * @return static
-     */
-    public function setCachePath($path);
     
     /**
      * Checks if the cache is enabled.
