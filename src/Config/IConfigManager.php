@@ -22,7 +22,7 @@ interface IConfigManager
 
     /**
      * Sets the extension for configuration(s) files.
-     * 
+     *
      * Useful if your configuration
      * file has'nt an extension, also
      * helps the auto driver detection
@@ -52,7 +52,7 @@ interface IConfigManager
      * @return static
      */
     public function setContainer(IContainer $container);
-    
+
     /**
      * Setups the cache.
      *
@@ -70,14 +70,14 @@ interface IConfigManager
      * @return bool
      */
     public function hasSource();
-    
+
     /**
      * Sets the DI container.
      *
      * @return bool
      */
     public function hasContainer();
-    
+
     /**
      * Checks if the cache is enabled.
      *
