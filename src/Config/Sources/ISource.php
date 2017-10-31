@@ -17,5 +17,5 @@ interface ISource
     /**
      * @return mixed
      */
-    function getSource();
+    public function getSource();
 }

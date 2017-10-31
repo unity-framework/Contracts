@@ -25,12 +25,12 @@ interface IConfig
      *
      * @return bool
      */
-    function has($config);
+    public function has($config);
 
     /**
      * Gets all available configurations.
      *
      * @return array
      */
-    function getAll();
+    public function getAll();
 }

@@ -12,13 +12,13 @@ interface ISourceFactory
     /**
      * Makes and returns an ISource instance.
      *
-     * @param string $file Our source.
+     * @param string $file   Our source.
      * @param string $driver The driver that will be used.
-     * @param null $ext
+     * @param null   $ext
      *
      * @return bool|ISource
      */
-    function makeFromFile($file, $driver = null, $ext = null);
+    public function makeFromFile($file, $driver = null, $ext = null);
 
     /**
      * Makes and returns an ISource instance that represents a folder.
@@ -26,8 +26,8 @@ interface ISourceFactory
      * @param string $folder
      * @param string $driver The driver that will be used.
      * @param string $ext
-     * 
+     *
      * @return ISource
      */
-    function makeFromFolder($file, $driver = null, $ext = null);
+    public function makeFromFolder($file, $driver = null, $ext = null);
 }
