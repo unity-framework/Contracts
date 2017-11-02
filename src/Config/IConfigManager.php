@@ -12,18 +12,18 @@ use Unity\Contracts\Container\IContainer;
 interface IConfigManager
 {
     /**
-     * Sets the configuration source.
+     * Sets the config source.
      *
-     * @param strin $source
+     * @param string $source
      *
      * @return static
      */
     public function setSource($source);
 
     /**
-     * Sets the extension for configuration(s) files.
-     * 
-     * Useful if your configuration
+     * Sets the extension for config(s) files.
+     *
+     * Useful if your config
      * file has'nt an extension, also
      * helps the auto driver detection
      * being fast.
@@ -35,14 +35,14 @@ interface IConfigManager
     public function setExt($ext);
 
     /**
-     * Sets the Driver to be used when
-     * trying retrieve configurations data.
+     * Sets the driver to be used when
+     * trying retrieve configs data.
      *
-     * @param string $driver
+     * @param string $alias
      *
      * @return static
      */
-    public function setDriver($driver);
+    public function setDriver($alias);
 
     /**
      * Sets the DI container.
@@ -52,17 +52,15 @@ interface IConfigManager
      * @return static
      */
     public function setContainer(IContainer $container);
-    
+
     /**
-     * Setups the cache.
+     * Enables or disables configs modifications.
      *
-     * @param string $cachePath
-     * @param string $cacheExpTime
-     * @param bool   $readOnlyMode
+     * @param bool $enable
      *
      * @return static
      */
-    public function setupCache($cachePath, $cacheExpTime = null, $readOnlyMode = true);
+    public function allowModifications($enable);
 
     /**
      * Checks if a source was provided.
@@ -70,14 +68,25 @@ interface IConfigManager
      * @return bool
      */
     public function hasSource();
-    
+
     /**
      * Sets the DI container.
      *
      * @return bool
      */
     public function hasContainer();
-    
+
+    /**
+     * Setups the cache.
+     *
+     * @param string $cachePath
+     * @param string $cacheExpTime
+     * @param bool   $allowModifications
+     *
+     * @return static
+     */
+    public function setupCache($cachePath, $cacheExpTime = null);
+
     /**
      * Checks if the cache is enabled.
      *
