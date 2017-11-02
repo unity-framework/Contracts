@@ -1,5 +1,7 @@
 <?php
 
+namespace Unity\Contracts\Reflector;
+
 /**
  * Interface IReflector.
  *
