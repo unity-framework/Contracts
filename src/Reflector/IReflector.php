@@ -2,6 +2,8 @@
 
 namespace Unity\Contracts\Reflector;
 
+use ReflectionClass;
+
 /**
  * Interface IReflector.
  *
