@@ -1,13 +1,15 @@
 {
     "name": "unity/contracts",
-    "version": "0.0",
+    "version": "",
     "description": "Unity framework component contracts.",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Eleandro Duzentos",
-            "email": "eleandro@inbox.ru"
+            "email": "eleandro@inbox.ru",
+            "homepage": "https://github.com/e200",
+            "role": "developer"
         }
     ],
     "require": {
