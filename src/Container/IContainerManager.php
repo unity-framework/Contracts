@@ -28,8 +28,8 @@ interface IContainerManager
     public function canUseAnnotations($enable);
 
     /**
-     * Builds an `IContainer` instance. 
-     * 
+     * Builds an `IContainer` instance.
+     *
      * @return IContainer
      */
     public function build();

@@ -76,6 +76,7 @@ interface IConfigManager
      */
     public function hasContainer();
 
+<<<<<<< HEAD
     /**
      * Setups the cache.
      *
@@ -87,6 +88,8 @@ interface IConfigManager
      */
     public function setupCache($cachePath, $cacheExpTime = null);
 
+=======
+>>>>>>> 6be0d30211bb50dbf94b605c865d7c7a7672a3e2
     /**
      * Checks if the cache is enabled.
      *

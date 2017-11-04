@@ -2,8 +2,6 @@
 
 namespace Unity\Contracts\Container\Dependency;
 
-use Unity\Contracts\Container\IContainer;
-
 /**
  * Interface IDependencyFactory.
  *
@@ -14,9 +12,9 @@ interface IDependencyFactory
     /**
      * Makes a `$class` instance.
      *
-     * @param string $class        Class name.
+     * @param string $class     Class name.
      * @param array  $arguments Constructor arguments.
-     * @param array  $binds Constructor parameter binds.
+     * @param array  $binds     Constructor parameter binds.
      *
      * @return mixed|object
      */
